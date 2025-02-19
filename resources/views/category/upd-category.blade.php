@@ -40,19 +40,6 @@
                             @enderror
                         </div>
 
-                        <!-- Gender -->
-                        <div class="mb-4">
-                            <label for="gender" class="form-label fw-semibold text-muted">Gender</label>
-                            <select name="gender" class="form-select shadow-sm" style="border-radius: 10px;">
-                                <option value="men" {{ $category->gender == 'men' ? 'selected' : '' }}>Men</option>
-                                <option value="women" {{ $category->gender == 'women' ? 'selected' : '' }}>Women</option>
-                                <option value="unisex" {{ $category->gender == 'unisex' ? 'selected' : '' }}>Unisex</option>
-                            </select>
-                            @error('gender')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                            @enderror
-                        </div>
-
                         <!-- Remark -->
                         <div class="mb-4">
                             <label for="remark" class="form-label fw-semibold text-muted">Remark</label>

@@ -32,19 +32,6 @@
                             @enderror
                         </div>
 
-                        <!-- Gender Dropdown -->
-                        <div class="mb-4">
-                            <label for="gender" class="form-label fw-semibold text-muted">Gender</label>
-                            <select name="gender" class="form-select shadow-sm" style="border-radius: 10px;">
-                                <option value="men">Men</option>
-                                <option value="women">Women</option>
-                                <option value="unisex">Unisex</option>
-                            </select>
-                            @error('gender')
-                                <div class="text-danger mt-1">{{ $message }}</div>
-                            @enderror
-                        </div>
-
                         <!-- Remark -->
                         <div class="mb-4">
                             <label for="remark" class="form-label fw-semibold text-muted">Remark</label>
@@ -81,7 +68,6 @@
                                     <th>No</th>
                                     <th>Perfume Name</th>
                                     <th>Photo</th>
-                                    <th>Gender</th>
                                     <th>Remark</th>
                                     <th class="text-center">Actions</th>
                                 </tr>
@@ -96,7 +82,6 @@
                                     <img width="50px" height="50px" src="{{ url("images/category/$category->photo") }}"> 
                                     
                                 </td>
-                                <td> {{ $category->gender }}</td>
                                 <td> {{ $category->remark }}</td>
                                 <td class="text-center"> 
                                     <a href="{{ url("/admin/category/del/{$category->id}") }}" class="btn btn-danger btn-sm me-2"><i class="fas fa-trash-alt"></i>

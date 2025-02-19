@@ -20,7 +20,6 @@ class CategoryController extends Controller
         [
             "name"        => "required",         
             "photo"       => "required",
-            "gender"      => "required",
         ]);
 
         if($validator->fails())
@@ -47,7 +46,6 @@ class CategoryController extends Controller
             $category->photo='';
         }
 
-        $category->gender = $request->gender ?: 'unisex';
 
         $category->remark = request()->remark;
 
@@ -101,7 +99,6 @@ class CategoryController extends Controller
             $category->photo = $name;
         }
         
-        $category->gender = request()->gender;
         $category->remark = request()->remark;
 
         $category->save();

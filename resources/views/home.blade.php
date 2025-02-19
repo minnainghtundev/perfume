@@ -15,7 +15,7 @@
 
         <div class="card text-center" >
 
-            <a class="card-text" href="{{ url("/category/{$category->id}/product/view") }}" >
+            <a class="card-text" href="{{ url("/category/{$category->id}/item/view") }}" >
 
             <img src="images/category/{{$category->photo}}" width="200" height="150" class="card-img-top"  alt="No Image" >
 
